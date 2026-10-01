@@ -5,14 +5,12 @@ public:
         short right = static_cast<short>(nums.size() - 1);
 
         while (left <= right) {
-            short mid = right - (right - left) / 2;
-
-            if (nums[mid] > target) {
-                right = mid - 1;
-            } else if (nums[mid] < target) {
-                left = mid + 1;
+            if (nums[right - (right - left) / 2] > target) {
+                right = (right - (right - left) / 2) - 1;
+            } else if (nums[right - (right - left) / 2] < target) {
+                left = (right - (right - left) / 2) + 1;
             } else {
-                return static_cast<int>(mid);
+                return static_cast<int>(right - (right - left) / 2);
             }
         }
 
