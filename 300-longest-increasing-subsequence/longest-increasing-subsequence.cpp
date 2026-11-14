@@ -2,7 +2,7 @@ class Solution {
 public:
     int lengthOfLIS(vector<int>& nums) {
         std::size_t size = nums.size();
-        std::vector<int> dp(size + 1, 1);
+        std::vector<int> dp(size, 1);
 
         int result = 1;
         for (std::size_t i = 1; i < size; ++i) {
