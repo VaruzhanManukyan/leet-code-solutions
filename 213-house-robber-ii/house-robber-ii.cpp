@@ -1,6 +1,6 @@
 class Solution {
 private:
-    int rob_1(std::vector<int> nums, int start, int end) {
+    int rob_1(const std::vector<int>& nums, int start, int end) {
         std::size_t size = end - start + 1;
         std::vector<int> dp(size + 1, 0);
         dp[0] = 0;
