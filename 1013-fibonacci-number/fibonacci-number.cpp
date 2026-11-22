@@ -7,20 +7,20 @@ public:
 
         int a = 1, b = 0;
         int c = 1, d = 1;
-
+        int na, nb, nc, nd;
         int power = n - 1;
         
         while (power > 0) {
             if (power & 1) {
-                int na = a * c + b * d;
-                int nb = a * d + b * (c - d);
+                na = a * c + b * d;
+                nb = a * d + b * (c - d);
 
                 a = na; 
                 b = nb;
             }
 
-            int nc = c * c + d * d;
-            int nd = c * d + d * (c - d);
+            nc = c * c + d * d;
+            nd = c * d + d * (c - d);
 
             c = nc;
             d = nd;
