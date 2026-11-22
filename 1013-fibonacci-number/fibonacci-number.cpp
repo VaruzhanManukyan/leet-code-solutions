@@ -28,6 +28,6 @@ public:
             power >>= 1;
         }
 
-        return static_cast<int>(a);
+        return a;
     }
 };
