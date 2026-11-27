@@ -9,7 +9,7 @@ public:
 
         std::unordered_set<int> set(nums.begin(), nums.end());
 
-        while (set.count(sum)) {
+        while (set.contains(sum)) {
             ++sum;
         }
 
